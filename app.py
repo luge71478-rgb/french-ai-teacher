@@ -13,4 +13,4 @@ def chat(message, history):
     response = openai.ChatCompletion.create(model="deepseek-chat", messages=messages)
     return response.choices[0].message.content
 
-gr.ChatInterface(chat, title="🇫🇷 AI法语学习助手").launch()
+gr.ChatInterface(chat, title="🇫🇷 AI法语学习助手").launch(server_name="0.0.0.0", server_port=8501)
